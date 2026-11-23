@@ -1,0 +1,93 @@
+<?php
+
+namespace PW\PWSMS\Gateways;
+
+use SoapClient;
+use Throwable;
+
+class Berandet extends Gateway {
+
+	public static function id(): string {
+		return 'berandet';
+	}
+
+	public static function name(): string {
+		return 'Berandet.ir - برندت';
+	}
+
+	public function send() {
+		$response = false;
+		$username = $this->username;
+		$password = $this->password;
+		$from     = $this->senderNumber;
+		$to       = $this->mobile;
+		$massage  = $this->message;
+
+		if ( empty( $username ) || empty( $password ) ) {
+			return false;
+		}
+
+		$i = sizeOf( $to );
+		while ( $i -- ) {
+			$uNumber = trim( $to[ $i ] );
+			$ret     = &$uNumber;
+			if ( substr( $uNumber, 0, 3 ) == '%2B' ) {
+				$ret = substr( $uNumber, 3 );
+			}
+			if ( substr( $uNumber, 0, 3 ) == '%2b' ) {
+				$ret = substr( $uNumber, 3 );
+			}
+			if ( substr( $uNumber, 0, 4 ) == '0098' ) {
+				$ret = substr( $uNumber, 4 );
+			}
+			if ( substr( $uNumber, 0, 3 ) == '098' ) {
+				$ret = substr( $uNumber, 3 );
+			}
+			if ( substr( $uNumber, 0, 3 ) == '+98' ) {
+				$ret = substr( $uNumber, 3 );
+			}
+			if ( substr( $uNumber, 0, 2 ) == '98' ) {
+				$ret = substr( $uNumber, 2 );
+			}
+			if ( substr( $uNumber, 0, 1 ) == '0' ) {
+				$ret = substr( $uNumber, 1 );
+			}
+			$to[ $i ] = '+98' . $ret;
+		}
+
+		$timeout = 1800;
+
+		try {
+
+			$client = new SoapClient(
+				'https://berandet.ir/Modules/DevelopmentTools/Groups/Messaging/MessagingWbs.php?wsdl',
+				[
+					'encoding'           => 'UTF-8',
+					'connection_timeout' => $timeout,
+				]
+			);
+
+			$parameter = [
+				'request' => [
+					'username'   => $username,
+					'password'   => $password,
+					'fromNumber' => $from,
+					'message'    => $massage,
+					'recieptor'  => $to,
+				],
+			];
+
+			$result = $client->sendMessageOneToMany( $parameter );
+
+		} catch ( Throwable $e ) {
+			return $e->getMessage();
+		}
+
+		if ( ( isset( $result->errCode ) && $result->errCode < 0 ) || ! empty( $result->err ) ) {
+			return json_encode( $result, JSON_UNESCAPED_UNICODE );
+		}
+
+		return true; // Success
+	}
+
+}
