@@ -1,130 +1,162 @@
-=== افزونه پیامک ووکامرس Persian WooCommerce SMS ===
-author: ووکامرس فارسی
-Contributors: Persianscript
-author URI: https://www.woosupport.ir
-Donate link: https://www.woosupport.ir
-plugin URI: https://woosupport.ir
-Tags: sms,ووکامرس فارسی,woocommerce,persian woocommerce,پیامک
-Requires at least: 5.8
-Tested up to: 6.3.2
+=== افزونه پیامک ووکامرس | Persian WooCommerce SMS ===
+Contributors: persianscript,mahdiy
+Tags: sms,پیامک,woocommerce sms,پیامک ووکامرس
+Donate link: https://woosupport.ir
+Requires at least: 6.8
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 6.1.0
+Stable tag: 7.3.3
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-افزونه کامل و حرفه ای برای اطلاع رسانی پیامکی سفارشات و رویداد های محصولات ووکامرس
+افزونه جامع و حرفه ای برای اطلاع رسانی پیامکی وضعیت سفارشات و رویداد های محصولات ووکامرس
 
 == Description ==
-**Persian Woocommerce SMS** یک افزونه کاربردی برای سیستم فروشگاه ساز رایگان ووکامرس می باشد که شما را قادر می سازد تا براحتی اقدام به اطلاع رسانی از طریق پیامک به مدیران و کاربرانتان کنید.
+افزونه پیامک حرفه‌ای ووکامرس یا **Persian Woocommerce SMS** یک افزونه جامع و کاربردی برای سیستم فروشگاه ساز رایگان ووکامرس می باشد که شما را قادر می سازد تا براحتی اقدام به اطلاع رسانی از طریق پیامک به مدیران و کاربرانتان کنید.
 
 = امکانات =
-* ارسال پیامک به مشتری و مدیرکل و مدیر محصول (فروشندگان) در صورت ثبت و تغییر وضعیت سفارش
-* امکان تنظیم ارسال پیامک در وضعیت های مختلف سفارش (تکمیل شده، معلق و...)
-* قابلیت تغییر متن و شخصی سازی هر پیامک برای مدیر، مشتری و فروشنده برای هر وضعیت سفارش
-* سیستم خبرنامه حرفه ای محصولات برای با خبر سازی کاربران از وضعیت موجود شدن محصولات، فروش ویژه شدن و ....
-* و سایر ویژگی های حرفه ای دیگر
+* ارسال پیامک اطلاع رسانی وضعیت سفارش به مشتری
+* ارسال پیامک اطلاع رسانی سفارش به مدیرکل و مدیر محصول (فروشندگان)
+* سازگاری کامل با افزونه چند فروشندگی دکان
+* قابلیت ارسال پیامک شخصی سازی شده در وضعیت های مختلف
+* پشتیبانی از وضعیت‌های اختصاصی ایجاد شده برای سفارش ها
+* قابلیت تعیین و شخصی سازی متن پیامک برای هر وضعیت سفارش
+* دارای سیستم خبرنامه یکپارچه و حرفه‌ای (موجود شدن محصولات، فروش ویژه شدن و...)
+* دارای درگاه پیامک تست جهت بررسی فرآیندها
+* قابلیت نمایش آرشیو پیامک های ارسال شده با قابلیت حذف آرشیو
+* پشتیبانی از تمام درگاه های پیامکی ایرانی
+* قابلیت ارسال پیامک تکی و انبوه از تنظیمات
+* قابلیت اتصال رسانی به مدیران از طریق ربات
+
+= ربات =
+
+ربات‌های ووکامرس فارسی در پیام رسان بله و پیام رسان تلگرام از آدرس های زیر در دسترس هستند. شما می‌توانید بدون نیاز به تهیه سرور جداگانه، صرفا با پیام دادن به این ربات ها، از وضعیت سفارش ها به صورت رایگان در پیام رسان‌ها مطلع شوید.
+* [https://t.me/PersianWoocommerceBot](https://t.me/PersianWoocommerceBot)
+* [https://ble.ir/PersianWoocommerceBot](https://ble.ir/PersianWoocommerceBot)
 
 
-* شما برای شروع کار با پلاگین نیاز به یک پنل اس ام اس دارید. پیشنهاد ما استفاده از پنل اس ام اس ملی پیامک است. این سامانه 20% تخفیف با کد wcsms20 به مدیران سایت های وردپرس ارائه می‌دهد.[خرید پنل پیامک](http://www.melipayamak.com/)
-
-
+شما برای شروع کار با پلاگین نیاز به یک پنل اس ام اس دارید. پیشنهاد ما استفاده از پنل اس ام اس ملی پیامک است. این سامانه 20% تخفیف با کد wcsms20 به مدیران سایت های وردپرس ارائه می‌دهد.[خرید پنل پیامک](https://www.melipayamak.com/)
 
 
 = درگاه های پیامک =
- * MeliPayamak.com
- * ParsGreen.com
- * ParandSMS.com
- * GAMAPayamak.com
- * LimooSMS.com
- * SMSFa.net
- * Arad-SMS.ir
- * FaraPayamak.ir
- * TJP.ir
- * SMS.Niazpardaz.com
- * PayamAfraz.ir
- * YektaSMS.com
- * Relax.ir
- * SMS.Paaz.ir
- * SmsBefrest.ir
- * Yektatech.ir
- * Postgah.info
- * IdehPayam.com
- * Azaranpayamak.ir
- * SMS.IR
- * S1.Websms.ir
- * Manirani.ir
- * Payam-Resan.com
- * BakhtarPanel.com
- * Avalpayam.com
- * IranSmsServer.com
- * LoginPanel.IR
- * SmsHooshmand.com
- * SmsFor.ir
- * ChaparPanel.ir
- * FirstPayamak.ir
- * SMS.Netpaydar.com
- * Panel.SmsPishgaman.com
- * ParsianPayam.ir
- * Hostiran.com
- * IranSMS.co
- * Negins.com
- * Afe.ir
- * Aradpayamak.net
- * iSMS.ir
- * RazPayamak.com
- * MihanSMSCenter.ir
- * 0098SMS.com
- * SefidSMS.ir
- * Chapargah.ir
- * Hafezpayam.com
- * MehrPanel.ir
- * KianArtPanel.ir
- * Sms.FarsTech.ir
- * Berandet.ir
- * NicSMS.com
- * Asanak.ir
- * Ssmss.ir
- * Hiro-Sms.com
- * RayganSms.com
- * SmsPanel.Trez.ir
- * SepahanSms.com(SepahanGostar.com)
- * Sms.3300.ir
- * Sms.SmsNegar.com
- * Sms.BehsaDade.com
- * FlashSms.ir(AdminPayamak.ir)
- * PayamSms.com
- * SMS.HadafWP.COM
- * SunwaySMS.com
- * mehrafraz.com
- * PSMS.Ir
- * IRPayamak.Com
- * Gama.systems
- * AtlasPayamak.ir
- * SMS-Melli.com
- * sms-meli.com
- * Parsian-SMS.ir
- * panelsms20.ir
- * sahandsms.com
- * newsms.ir
- * sms.parsiantd.com
- * payamkotah.com
- * npsms.com
- * karenkart.com
- * jarin.ir
- * samait.ir
- * 1b1.ir
- * pardis.ssmss.ir
- * candoosms.com
- * Kavenegar.com (بجای نام کاربری ApiKey را وارد کرده و کلمه عبور را خالی قرار دهید)
- * SabaNovin.com (بجای نام کاربری ApiKey را وارد کرده و کلمه عبور را خالی قرار دهید)
- * webone-sms.com
- * satsms.ir
- * asiasms.ir
- * payamakyab.com
- * Arad ITC
- * SMSNegar.ir
- 
+* MeliPayamak.com - ملی پیامک
+* 0098SMS.com - ۰۰۹۸ اس ام اس
+* 1b1.ir - یک به یک
+* Afe.ir - واید
+* Arad-SMS.ir - آراد اس ام اس
+* AradPayamak.net - آراد پیامک
+* Asanak.ir - آسانک
+* AsiaSMS.ir - آسیا اس ام اس
+* AtlasPayamak.ir - اطلس پیامک
+* AvalPayam.com - اول پیام
+* AzaranPayamak.ir - آذران پیامک
+* Bakhtar.xyz - باختر پنل
+* Berandet.ir - برندت
+* CandooSMS.com - کندو اس ام اس
+* ChaparPanel.ir - چاپار
+* Chapargah.com - چاپارگاه
+* FaraPayamak.ir - فراپیامک
+* FarazSMS.com - فراز اس ام اس
+* FirstPayamak.ir - اولین پیامک
+* GAMAPayamak.com - گاما پیامک
+* Ghasedak.me - قاصدک
+* HafezPayam.com - حافظ پیام
+* Hiro-SMS.com - هیرو اس ام اس
+* HostIran.com - هاست ایران
+* ISMS.ir - آی اس ام اس
+* IdehPayam.com - ایده پیام
+* IrPayamak.com - آی آر پیامک
+* IranSMS.co - ایران اس ام اس
+* IranSMS.com - ایران اس ام اس
+* KaveNegar.com - کاوه نگار
+* Login.NiazPardaz.ir - نیاز پرداز
+* LoginPanel.ir - ایلام اس ام اس
+* LogisticSMS.ir - لجستیک پیامک
+* MSGWay.com - راه پیام
+* ManIrani.ir - من ایرانی
+* MaxSMS.co - مکس اس ام اس
+* Mediana.ir - مدیانا
+* MehrAfraz.com - مهر افراز آسیا
+* ModirPayamak.com - مدیر پیامک
+* NH1.ir - نوین همراه
+* NMTSMS.ir - نگین مرمر تجارت
+* NPSMS.com - نوین پرداز
+* OneSMS.ir - وان اس‌ام‌اس
+* Negins.com - نگین
+* NewSMS.ir - نیو اس ام اس
+* NikSMS.com - نیک اس ام اس
+* Paaz.ir - پاز
+* Panel.SignalAds.com - سیگنال ادز
+* PanelChi.com - پنل چی
+* PanelSMSPayam.ir - اس ام اس پیام
+* ParandSMS.ir - پرند اس ام اس
+* Pardis.sSMSs.ir - پردیس اس ام اس
+* ParsGreen.com - پارس گرین
+* Parsian-SMS.ir - پارسیان اس ام اس
+* PayamKotah.com - پیام کوتاه
+* PayamSMS.com - پیام اس ام اس
+* PayamakYab.com - پیامک یاب
+* Persian-SMS.com - پرشین اس ام اس
+* RayganSMS.com - رایگان اس ام اس
+* RazPayamak.com - راز پیامک
+* Relax.ir - ریلکس
+* SMS-Meli.com - سامانه پیامک ملی
+* SMS.3300.ir - ۳۳۰۰
+* SMS.BehsaDade.com - بهسا داده
+* SMS.FarsTech.ir - فارس تک
+* SMS.HadafWP.com - هدف وردپرس
+* SMS.NetPaydar.com - شبکه پایدار
+* SMS.NiazPardaz.com - نیاز پرداز
+* SMS.SMSNegar.com - اس ام اس نگار
+* SMSFor.ir - ارتباط آفرینان تات
+* SMSHooshmand.com - اس ام اس هوشمند
+* SMSMelli.com - اس ام اس ملی
+* SMSNegar.ir - اس ام اس نگار
+* SMSPanel.Trez.ir - ترز
+* SabaNovin.com - صبا نوین
+* SahandSMS.com - سهند اس ام اس
+* SamaIT.ir - سما ارتباط اسپادانا
+* SatSMS.ir - سات اس ام اس
+* SepahanSMS.com - سپاهان گستر
+* Sipka.co - سیپکا
+* SornaSMS.net - سورنا اس ام اس
+* SunWaySMS.com - راه آفتاب
+* TSMS.ir - طوبی اس ام اس
+* WebOne-SMS.com - وب وان
+* WebSMS.ir - وب اس ام اس
+* WikiPayam.ir - ویکی پیام
+* YektaTech.ir - یکتا تک
+* arad itc - آراد آی تی سی
+* bale.ai - پیامرسان بله
+* payam-resan.com
+* payam-resan.com (پترن)
+* sSMSs.ir - صلابت
+* Panel.SmsPishgaman.com
+* SMS.ir (نام کاربری و کلمه عبور)
+* SMS.ir (کلید دسترسی)
+* SMSFa.ir
+* SmsBefrest.ir
+* TJP.ir
+* farazsms.com - ایران پیامک (فراز اس ام اس)
+* flashsms.ir (adminpayamak.ir)
+* gama.systems
+* ippanel.com - آی پی پنل (توکن)
+* iransmsserver.com
+* karenkart.com
+* kianartpanel.ir
+* mehrpanel.ir
+* parsianpayam.ir
+* payamafraz.com
+* postgah.info
+* pwsms.log
+* sefidsms.ir
+* sms.parsiantd.com
+* w.jarin.ir
 
-= پشتیبانی =
-*  [پشتیبانی در ووکامرس فارسی](http://forum.persianscript.ir/topic/25199-%D8%AA%D8%A7%D9%BE%DB%8C%DA%A9-%D9%BE%D8%B4%D8%AA%DB%8C%D8%A8%D8%A7%D9%86%DB%8C-%D8%A7%D9%81%D8%B2%D9%88%D9%86%D9%87-%D9%BE%DB%8C%D8%A7%D9%85%DA%A9-%D9%88%D9%88%DA%A9%D8%A7%D9%85%D8%B1%D8%B3/?tab=comments#comment-129964/)
+= پیامک ورود و ثبت نام =
+برای ارسال پیامک ورود و عضویت در سایت وردپرسی می‌توانید از افزونه [**پینوا**](https://wordpress.org/plugins/pinova) که به صورت رایگان در مخزن وردپرس منتشر شده است، استفاده کنید. با داشتن این دو افزونه رایگان، سبک و کاربردی، سایت شما برای ارسال اطلاعیه ها و پیامک ها بی نیاز از هر افزونه‌ای می‌شود.
+
+[https://wordpress.org/plugins/pinova](https://wordpress.org/plugins/pinova)
 
 == Installation ==
 1. Upload `persian-woocommerce-sms` folder to the `/wp-content/plugins/` directory
@@ -132,22 +164,89 @@ Stable tag: 6.1.0
 3. Complete Persian Woocommerce SMS Settings
 
 == Screenshots ==
-1. Screen shot 1
-2. Screen shot 2
-3. Screen shot 3
-4. Screen shot 4
-5. Screen shot 5
-6. Screen shot 6
-7. Screen shot 7
-8. Screen shot 8
-9. Screen shot 9
-10. Screen shot 10
-11. Screen shot 11
-12. Screen shot 12
-13. Screen shot 13
-14. Screen shot 14
+1. تنظیمات درگاه پیامک
+2. اطلاع رسانی مدیر | ربات تلگرام و بله رایگان
+3. ارسال پیامک وضعیت سفارشات
+4. خبرنامه حرفه‌ای محصولات
+5. مدیریت مشترکین خبرنامه
+6. ارسال پیامک تکی و انبوه
+7. تاریخچه پیامک‌های ارسال شده
+8. سازگاری با فروشندگان دکان
+9. ارسال پیامک به فروشندگان دکان
+10. شخصی سازی خبرنامه برای محصولات
+11. عضویت در خبرنامه
+12. ارسال پیامک دسته جمعی
+13. ارسال پیامک کد رهگیری پستی
 
 == Changelog ==
+= 7.3.3 - 1405/08/10 =
+* افزودن درگاه وان اس‌ام‌اس (OneSMS.ir)
+* بروزرسانی درگاه وب وان و استفاده از REST API
+* بروزرسانی درگاه پارس گرین و پشتیبانی از ارسال WhiteMsg
+* بروزرسانی درگاه رایگان اس ام اس و سازگاری با پینوا
+* بروزرسانی آدرس وبسرویس پیامک یاب
+= 7.3.2 - 1405/07/28 =
+* فعالسازی باکس رهگیری پستی به صورت پیشفرض
+* حذف nusoap_client و استفاده از SoapClient
+* سازگاری با ووکامرس 11.2
+* حل خطاهای گزارش شده کاربران
+= 7.3.1 - 1405/07/22 =
+* حل مشکل کلیدهای افزونه پیامک در لیست افزونه ها
+= 7.3.0 - 1405/07/19 =
+* معرفی افزونه ورود و ثبت نام پیامکی پینوا
+* حل مشکل کندی سرعت پیشخوان در برخی سایت‌ها
+* افزودن قابلیت صفحه بندی در آرشیو پیامک های ارسالی
+* سازگاری بیشتر با سفارشات و محصولات فروشندگان دکان
+* حل مشکل عدم ارسال خبرنامه در ویرایش سریع محصول
+* بهبود فرآیند انتخاب درگاه پیامک در تنظیمات
+* حل مشکل تگ {vendor_name} برای فروشندگان
+* بهبود رابط کاربری پنل مدیریت
+* بهبود متن خطاهای درگاه ملی پیامک
+* بروزرسانی درگاه sms.ir
+* بروزرسانی درگاه آرکا اس ام اس
+* بروزرسانی درگاه پارس گرین
+* بروزرسانی درگاه سیگنال ادز
+= 7.2.2 =
+* حل مشکل ارسال پیامک تکراری کمبود موجودی به مدیر
+= 7.2.1 =
+* بروزرسانی درگاه ملی پیامک طبق آخرین مستندات
+* بروزرسانی درگاه کاوه نگار طبق آخرین مستندات
+* بروزرسانی درگاه sms.ir طبق آخرین مستندات
+* بروزرسانی درگاه ippanel طبق آخرین مستندات
+* حل مشکل پیامک کمبود موجودی
+* حل برخی مشکلات خبرنامه
+= 7.2.0 =
+* افزودن ربات اطلاع رسانی رایگان بله https://ble.ir/PersianWoocommerceBot
+* افزودن ربات اطلاع رسانی رایگان تلگرام https://t.me/PersianWoocommerceBot
+* افزودن درگاه پیامرسان بله
+* سازگاری با ساختار استاندارد تعریف پیامک
+* بروزرسانی درگاه پیامکی پنل‌چی
+* افزودن پیامک فروشندگان دکان
+= 7.1.1 =
+* رفع خطای چند وبسرویس پیامکی
+= 7.1.0 =
+* افزوده شدن قابلیت ارسال پیامک کد رهگیری مرسولات پستی (جدید)
+* رفع خطا در صفحه خبرنامه
+* رفع خطای چند وبسرویس پیامکی
+= 7.0.8 =
+* افزوده شدن وبسرویس های جدید و رفع چند مورد خطا
+= 7.0.7 =
+* افزوده شدن وبسرویس های جدید و رفع چند مورد خطا
+= 7.0.5 =
+* رفع مشکل در صفحه بندی خبرنامه
+= 7.0.3 =
+* افزوده شدن وبسرویس IPPANEL.COM
+= 7.0.3 =
+* رفع چند باگ گزارش شده
+* تغییرات وبسرویس ها
+= 7.0.0 =
+* بازنویسی کامل افزونه
+* سازگاری با PHP 8.1
+* رفع خطا در هنگام ویرایش محصول
+* رفع مشکل ارسال پیامک تکراری در خبرنامه مشتریان (NEW)
+* قابلیت دریافت خروجی اکسل از شماره مشتریان (NEW)
+* امکان پاکسازی گزارش ارسال پیامک (NEW)
+* افزودن وبسرویس مکث اس ام اس - IPPANEL.CO (NEW)
 = 6.1.0 =
 * سازگاری با HPOS
 * حل مشکل ارسال تکراری در خبرنامه
@@ -364,5 +463,5 @@ Stable tag: 6.1.0
 * نسخه اولیه
 
 == Upgrade Notice ==
-= 6.0.0 =
-* بهبود دیتابیس و افزودن چند پنل پیامک
+= 7.1.1 =
+* افزوده شدن قابلیت ارسال کد رهگیری پستی با پیامک (وارد تنظیمات شوید / پیامک مشتریان)
