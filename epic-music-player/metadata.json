@@ -1,0 +1,6 @@
+{
+  "name": "Epic Music Player",
+  "description": "An elegant, modern local music player with professional audio customisation, equalizer, multiple stunning themes, playlists manager, and advanced offline capabilities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
