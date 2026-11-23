@@ -1,0 +1,97 @@
+<?php
+
+namespace PW\PWSMS\Gateways;
+
+
+use SoapClient;
+use Throwable;
+
+class CandooSMS extends Gateway {
+
+	public static function id(): string {
+		return 'candoo';
+	}
+
+	public static function name(): string {
+		return 'CandooSMS.com - کندو اس ام اس';
+	}
+
+	public function send() {
+
+		$username = $this->username;
+		$password = $this->password;
+		$from     = $this->senderNumber;
+		$massage  = $this->message;
+		$to       = $this->mobile;
+
+		if ( empty( $username ) || empty( $password ) ) {
+			return false;
+		}
+
+		$i = sizeOf( $to );
+		while ( $i -- ) {
+			$uNumber = trim( $to[ $i ] );
+			$ret     = &$uNumber;
+			if ( substr( $uNumber, 0, 3 ) == '%2B' ) {
+				$ret = substr( $uNumber, 3 );
+			}
+			if ( substr( $uNumber, 0, 3 ) == '%2b' ) {
+				$ret = substr( $uNumber, 3 );
+			}
+			if ( substr( $uNumber, 0, 4 ) == '0098' ) {
+				$ret = substr( $uNumber, 4 );
+			}
+			if ( substr( $uNumber, 0, 3 ) == '098' ) {
+				$ret = substr( $uNumber, 3 );
+			}
+			if ( substr( $uNumber, 0, 3 ) == '+98' ) {
+				$ret = substr( $uNumber, 3 );
+			}
+			if ( substr( $uNumber, 0, 2 ) == '98' ) {
+				$ret = substr( $uNumber, 2 );
+			}
+			if ( substr( $uNumber, 0, 1 ) == '0' ) {
+				$ret = substr( $uNumber, 1 );
+			}
+			$to[ $i ] = '98' . $ret;
+		}
+
+		try {
+
+			$client = new SoapClient(
+				'https://my.candoosms.com/services/?wsdl',
+				[
+					'encoding' => 'UTF-8',
+				]
+			);
+
+			$results = $client->Send( [
+				'username'  => $username,
+				'password'  => $password,
+				'srcNumber' => $from,
+				'body'      => $massage,
+				'destNo'    => $to,
+				'flash'     => '0',
+			] );
+
+			$error = [];
+			foreach ( $results as $result ) {
+				if ( ! isset( $result->Mobile ) || stripos( $result->ID, 'e' ) !== false ) {
+					$error[] = $result;
+				}
+			}
+
+			if ( empty( $error ) ) {
+				return true; // Success
+			}
+
+			$response = implode( ',', $error );
+
+		} catch ( Throwable $e ) {
+			$response = $e->getMessage();
+		}
+
+		return $response;
+	}
+
+}
