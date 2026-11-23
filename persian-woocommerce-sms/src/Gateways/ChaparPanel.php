@@ -1,0 +1,61 @@
+<?php
+
+namespace PW\PWSMS\Gateways;
+
+use SoapClient;
+use Throwable;
+
+class ChaparPanel extends Gateway {
+
+	public static function id(): string {
+		return 'chaparpanel';
+	}
+
+	public static function name(): string {
+		return 'ChaparPanel.ir - چاپار';
+	}
+
+	public function send() {
+		$response = false;
+		$username = $this->username;
+		$password = $this->password;
+		$from     = $this->senderNumber;
+		$to       = $this->mobile;
+		$massage  = $this->message;
+
+		if ( empty( $username ) || empty( $password ) ) {
+			return false;
+		}
+
+		try {
+
+			$client = new SoapClient( "https://87.107.121.52/post/send.asmx?wsdl" );
+
+			$encoding   = "UTF-8";
+			$parameters = [
+				'username' => $username,
+				'password' => $password,
+				'from'     => $from,
+				'to'       => $to,
+				'text'     => iconv( $encoding, 'UTF-8//TRANSLIT', $massage ),
+				'isflash'  => false,
+				'udh'      => "",
+				'recId'    => [ 0 ],
+				'status'   => 0,
+			];
+
+			$sms_response = $client->SendSms( $parameters )->SendSmsResult;
+
+		} catch ( Throwable $e ) {
+			$sms_response = $e->getMessage();
+		}
+
+		if ( $sms_response == 1 ) {
+			return true; // Success
+		} else {
+			$response = $sms_response;
+		}
+
+		return $response;
+	}
+}
