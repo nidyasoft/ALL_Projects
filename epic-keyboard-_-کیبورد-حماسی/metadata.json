@@ -1,0 +1,6 @@
+{
+  "name": "Epic Keyboard / کیبورد حماسی",
+  "description": "Smart Multilingual Gboard-style Keyboard (Persian, English, Turkish, Azerbaijani, Arabic) with intelligent suggestions, diacritics, and clipboard manager.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
