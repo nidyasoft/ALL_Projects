@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_triple_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Dynamic Background Image with customizable color and opacity -->
+    <ImageView
+        android:id="@+id/widget_triple_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_widget_card"
+        android:contentDescription="Widget Background" />
+
+    <LinearLayout
+        android:id="@+id/widget_triple_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Big Digital Clock Section -->
+        <LinearLayout
+            android:id="@+id/widget_digital_clock_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingBottom="4dp">
+
+            <TextClock
+                android:id="@+id/widget_text_clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:format24Hour="HH:mm"
+                android:format12Hour="hh:mm"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textColor="#00F2FE" />
+
+        </LinearLayout>
+
+    <!-- Header: Weekday and Calendar Title -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="4dp">
+
+        <TextView
+            android:id="@+id/widget_weekday_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="امروز"
+            android:textColor="#38BDF8"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/widget_header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="تقویم سه‌گانه"
+            android:textColor="#94A3B8"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#26334D"
+        android:layout_marginBottom="4dp" />
+
+    <!-- 1. Solar Hijri Date Row (تاریخ شمسی) -->
+    <LinearLayout
+        android:id="@+id/widget_solar_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp">
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/dot_cyan"
+            android:contentDescription="Solar Indicator" />
+
+        <TextView
+            android:id="@+id/widget_solar_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="شمسی:"
+            android:textColor="#00F2FE"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/widget_solar_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="--"
+            android:textColor="#F1F5F9"
+            android:textSize="11sp"
+            android:gravity="end" />
+    </LinearLayout>
+
+    <!-- 2. Gregorian Date Row (تاریخ میلادی) -->
+    <LinearLayout
+        android:id="@+id/widget_gregorian_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp">
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/dot_amber"
+            android:contentDescription="Gregorian Indicator" />
+
+        <TextView
+            android:id="@+id/widget_gregorian_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="میلادی:"
+            android:textColor="#FFB703"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/widget_gregorian_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="--"
+            android:textColor="#F1F5F9"
+            android:textSize="11sp"
+            android:gravity="end" />
+    </LinearLayout>
+
+    <!-- 3. Islamic Lunar Date Row (تاریخ قمری) -->
+    <LinearLayout
+        android:id="@+id/widget_lunar_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp">
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:src="@drawable/dot_purple"
+            android:contentDescription="Lunar Indicator" />
+
+        <TextView
+            android:id="@+id/widget_lunar_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="قمری:"
+            android:textColor="#B388FF"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/widget_lunar_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="--"
+            android:textColor="#F1F5F9"
+            android:textSize="11sp"
+            android:gravity="end" />
+    </LinearLayout>
+
+</LinearLayout>
+</FrameLayout>

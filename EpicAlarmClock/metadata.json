@@ -1,0 +1,6 @@
+{
+  "name": "ساعت هشدار اپیک",
+  "description": "ساعت هشدار پیشرفته با تنظیم شیفت کاری، تقویم‌های سه‌گانه، ساعت جهانی، کرنومتر و تایمر چندگانه",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

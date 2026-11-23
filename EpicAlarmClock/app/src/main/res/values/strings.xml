@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ساعت هشدار اپیک</string>
+    <string name="widget_triple_date_label">ویجت تقویم سه‌گانه</string>
+    <string name="widget_triple_date_desc">نمایش تاریخ‌های شمسی، میلادی و قمری با قابلیت سفارشی‌سازی در تنظیمات</string>
+    <string name="widget_quick_stop_label">ویجت قطع سریع آلارم (1x1)</string>
+    <string name="widget_quick_stop_desc">دکمه کوچک و سریع برای قطع فوری زنگ آلارم و تایمر در صفحه اصلی</string>
+</resources>
