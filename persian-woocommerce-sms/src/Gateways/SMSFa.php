@@ -1,0 +1,60 @@
+<?php
+
+namespace PW\PWSMS\Gateways;
+
+
+use SoapClient;
+use Throwable;
+
+class SMSFa extends Gateway {
+
+	public static function id(): string {
+		return 'smsfa';
+	}
+
+	public static function name(): string {
+		return 'SMSFa.ir';
+	}
+
+	public function send() {
+
+		$username = $this->username;
+		$password = $this->password;
+		$from     = $this->senderNumber;
+		$to       = $this->mobile;
+		$massage  = $this->message;
+
+		if ( empty( $username ) || empty( $password ) ) {
+			return false;
+		}
+
+		try {
+
+			$client = new SoapClient( 'https://smsfa.net/API/Send.asmx?WSDL' );
+
+			$sms_response = $client->SendSms(
+				[
+					'username' => $username,
+					'password' => $password,
+					'from'     => $from,
+					'to'       => $to,
+					'text'     => $massage,
+					'flash'    => false,
+					'udh'      => '',
+				]
+			)->SendSmsResult;
+
+		} catch ( Throwable $e ) {
+			$sms_response = $e->getMessage();
+		}
+
+		if ( intval( $sms_response ) > 0 ) {
+			return true; // Success
+		} else {
+			$response = $sms_response;
+		}
+
+		return $response;
+	}
+
+}
