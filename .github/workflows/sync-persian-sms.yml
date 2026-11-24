@@ -1,0 +1,35 @@
+name: Sync Persian SMS Plugin
+
+on:
+  workflow_dispatch: # امکان اجرای دستی از تب Actions
+
+permissions:
+  contents: write
+
+jobs:
+  download-and-extract:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download ZIP file
+        run: |
+          curl -L -o plugin.zip "https://yektap.ir/001/persian-woocommerce-sms.zip"
+
+      - name: Extract ZIP to target directory
+        run: |
+          # ایجاد پوشه مقصد در صورت عدم وجود
+          mkdir -p persian-woocommerce-sms
+          # استخراج محتویات ZIP داخل پوشه مقصد
+          unzip -o plugin.zip -d persian-woocommerce-sms
+          # حذف فایل ZIP برای تمیز ماندن مخزن
+          rm plugin.zip
+
+      - name: Commit and Push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add persian-woocommerce-sms
+          git commit -m "Sync persian-woocommerce-sms from yektap.ir" || exit 0
+          git push
